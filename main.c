@@ -11,9 +11,12 @@
 
 
 int main(void) {
-
-    SorozatNovekvoLepesekkel();
-    SzamtaniSorozat();
+    //Tartaly();
+    //SorozatNovekvoLepesekkel();
+    //SzamtaniSorozat();
+    //SzamGondolo(1);
+    //MasodfokuMegoldo();
+    MasodFokuMegoldo(2, -1, -6);
     return 0;
 }
 
