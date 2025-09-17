@@ -5,4 +5,6 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(Prog1 main.c
         Week1.c
-        Week1.h)
+        Week1.h
+        KZH.h
+        KZH.c)

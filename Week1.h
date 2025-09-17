@@ -5,8 +5,7 @@
 #ifndef PROG1_WEEK1_H
 #define PROG1_WEEK1_H
 
-int SorozatNovekvoLepesekkel();
-int SzamtaniSorozat();
+
 //5
 float TartalySzamolo(int a, float b);
 void Tartaly();

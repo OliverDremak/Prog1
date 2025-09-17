@@ -1,4 +1,5 @@
 #include "Week1.h"
+#include "KZH.h"
 #include <stdio.h>
 
 
@@ -16,7 +17,8 @@ int main(void) {
     //SzamtaniSorozat();
     //SzamGondolo(1);
     //MasodfokuMegoldo();
-    MasodFokuMegoldo(2, -1, -6);
+    //MasodFokuMegoldo(2, -1, -6);
+
     return 0;
 }
 
