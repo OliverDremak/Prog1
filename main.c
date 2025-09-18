@@ -1,5 +1,6 @@
 #include "Week1.h"
 #include "KZH.h"
+#include "Week2.h"
 #include <stdio.h>
 
 
@@ -8,7 +9,6 @@
 // Gyakorlat, labor - 70%-os részvétel
 // 4-5 kis zh - 2 nagy zh
 // nagy házi - 5. hét
-
 
 
 int main(void) {
@@ -20,5 +20,6 @@ int main(void) {
     //MasodFokuMegoldo(2, -1, -6);
 
     return 0;
+
 }
 
