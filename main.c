@@ -18,6 +18,7 @@ int main(void) {
     //SzamGondolo(1);
     //MasodfokuMegoldo();
     //MasodFokuMegoldo(2, -1, -6);
+    TombLeptetese();
 
     return 0;
 

@@ -7,4 +7,6 @@
 
 void Legkisebb();
 
+void TombLeptetese();
+
 #endif //PROG1_WEEK2_H
