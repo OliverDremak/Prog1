@@ -40,3 +40,30 @@ int SorozatNovekvoLepesekkel() {
     }
     return 0;
 }
+struct MyInp {
+    int day;
+    int peopleNum;
+};
+
+void Muzeum1() {
+    struct MyInp tomb[10];
+    int i = 0;
+    int temp1, temp2;
+    do {
+        scanf("%d%d",&temp1, &temp2);
+        tomb[i].day = temp1;
+        tomb[i].peopleNum = temp2;
+        i++;
+    } while (temp1 != -1 && temp2 != -1);
+    int maxDay = tomb[0].day;
+    for (int j = 1; j < 10; ++j) {
+        if (tomb[j].peopleNum == -1 ) {
+            break;
+        }
+        if (tomb[j].peopleNum > tomb[j-1].peopleNum ) {
+            maxDay = tomb[j].day;
+        }
+
+    }
+    printf("%d", maxDay);
+}

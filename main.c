@@ -18,8 +18,8 @@ int main(void) {
     //SzamGondolo(1);
     //MasodfokuMegoldo();
     //MasodFokuMegoldo(2, -1, -6);
-    TombLeptetese();
-
+    //TombLeptetese();
+    Muzeum1();
     return 0;
 
 }
