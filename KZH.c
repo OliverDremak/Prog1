@@ -4,7 +4,8 @@
 
 #include <stdio.h>
 
-// Kis zh példák (gyakorlat 1-ből)
+// Kis zh példák
+// F01
 
 /*Egy program bekér a felhasználótól három valós számot, kiírja, hogy az első szám negatív vagy nemnegatív, majd az első számtól indulva,
  *a második szám által meghatározott lépésközzel halad
@@ -40,21 +41,71 @@ int SorozatNovekvoLepesekkel() {
     }
     return 0;
 }
+/*Egy program bekér a felhasználótól két valós számot, melyek két szöget jelentenek °-ban.
+ *A program a kisebb szögtől a nagyobbig haladva kiírja a szögeket egy fokonként, és mindegyik szög mellett
+ *zárójelbe téve radiánban is kiírja a szöget (1°=π/180 rad). A program akkor is helyesen működik, ha a felhasználó előbb a nagyobb, aztán a
+ *kisebb szöget adja meg (és fordítva is).
+ *Pl. be: 11.3 14.9 ki: 11.3 (0.197), 12.3 (0.215), 13.3 (0.232), 14.3 (0.249),
+ *Pl. be: 180 176 ki: 176 (3.07), 177 (3.09), 178 (3.11), 179 (3.12), 180 (3.14),*/
+
+int Szogek() {
+    const float pi = 3.14;
+    float a,f,s;
+    printf("be:");
+    scanf("%f%f",&a,&f);
+    if (a>f) {
+        s =a;
+        a = f;
+        f = s;
+    }
+    printf("ki:");
+    while (a<=f) {
+        printf(" %.1f(%f)",a, a*pi/180);
+        a++;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+//
+// F02
+//
+
+
+/*Egy múzeumban kíváncsiak arra, a hét mely napján van a legtöbb látogató. Ehhez több hét adatait feldolgozzák.
+ *Írj programot, mely a szabványos bemenetén fogadja a múzeum napi látogatási adatait úgy,
+ *hogy soronként a hét napjának sorszámát kapjuk 0-6 között, majd szóközzel elválasztva a látogatók számát.
+ *Az adatok rendezetlenül érkeznek, adott sorszámú naphoz több bejegyzés is tartozhat. A bemenet végét -1 -1 jelzi.
+ *Írja ki a program a szabványos kimenetre annak a napnak a sorszámát, mely a legtöbb látogatót jelenti. Feltételezzük, hogy egy ilyen nap van.
+ */
+
+// Ez nem igy kell, de mind 1
+
 struct MyInp {
     int day;
     int peopleNum;
 };
 
 void Muzeum1() {
+    // Ezt nem igy kell: a jo megoldásért:
+
+
     struct MyInp tomb[10];
-    int i = 0;
-    int temp1, temp2;
-    do {
-        scanf("%d%d",&temp1, &temp2);
-        tomb[i].day = temp1;
-        tomb[i].peopleNum = temp2;
-        i++;
-    } while (temp1 != -1 && temp2 != -1);
+    {
+        int i = 0;
+        int temp1, temp2;
+        do {
+            scanf("%d%d",&temp1, &temp2);
+            tomb[i].day = temp1;
+            tomb[i].peopleNum = temp2;
+            i++;
+        } while (temp1 != -1 && temp2 != -1);
+    }
     int maxDay = tomb[0].day;
     for (int j = 1; j < 10; ++j) {
         if (tomb[j].peopleNum == -1 ) {
@@ -66,4 +117,31 @@ void Muzeum1() {
 
     }
     printf("%d", maxDay);
+
+}
+
+/*Az M7-es autópályán traffipaxot szerelnek fel, amely a Balaton felé igyekvők gyorshajtásait rögzíti.
+ *A mérés több nap adatait is tartalmazza; egy autó adatait „óra perc sebesség” formában.
+ *Pl. 12 45 198 azt jelenti, 12:45-kor 198 km/h-val száguldott valaki. Az adatsor végét 0 0 0 zárja.
+ *Készíts a C programod egy táblázatot arról, hogy melyik órában mennyivel ment a leggyorsabb autó!
+ *Ha egy adott órában nem volt gyorshajtás, az maradjon ki!*/
+
+void Autopalya1() {
+
+    int maxPerOra[24] = {0};
+    {
+        int temp, temp1, temp2;
+        do {
+            scanf("%d%d%d",&temp,&temp1,&temp2);
+            if (temp2 > 130 && temp2 > maxPerOra[temp]) {
+                maxPerOra[temp] = temp2;
+            }
+        } while (temp != 0);
+    }
+    for (int i = 0; i < 24; ++i) {
+        if (maxPerOra[i] > 130) {
+           printf("%d:00 - %d:59 -> %d km/h\n",i ,i, maxPerOra[i] );
+        }
+
+    }
 }

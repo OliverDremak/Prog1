@@ -7,6 +7,7 @@
 
 int SorozatNovekvoLepesekkel();
 int SzamtaniSorozat();
+int Szogek();
 void Muzeum1();
-
+void Autopalya1();
 #endif //PROG1_KZH_H

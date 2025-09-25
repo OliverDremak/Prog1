@@ -9,4 +9,8 @@ add_executable(Prog1 main.c
         KZH.h
         KZH.c
         Week2.h
-        Week2.c)
+        Week2.c
+        NZH.h
+        NZH.c
+        Week3.h
+        Week3.c)
