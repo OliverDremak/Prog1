@@ -120,3 +120,37 @@ void versenyzo_kiir(Versenyzo v) {
     printf("név: %s, helyezés: %d, Születés:",v.nev,v.helyezes);
     datum_kiir(v.szuletes);
 }
+
+// 6
+ void MenuVezerelt() {
+    int m = 1;
+    int a = 1;
+    do {
+        printf("0. Alapertek visszaallitasa (a = 1)\n"
+       "1. Hozzaad 1-et\n"
+       "2. Megforditja az elojelet\n"
+       "3. Szorozza 2-vel\n"
+       "9. Kilepes\n");
+        scanf("%d",&m);
+        switch (m) {
+            case 0:
+                a = 1;
+                printf("a = 1\n");
+                break;
+            case 1:
+                a++;
+                printf("%d\n",a);
+                break;
+            case 2:
+                a = a*-1;
+                printf("%d\n", a);
+                break;
+            case 3:
+                a = a*2;
+                printf("%d\n",a);
+                break;
+            case 9:
+                break;
+        }
+    } while (m != 9);
+}

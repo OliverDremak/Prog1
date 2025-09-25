@@ -27,7 +27,8 @@ int main(void) {
     //KiirKapitany();
     //Függvények_alapok();
     //Madarnyelv();
-    OsszetettAdatszerkezet();
+    //2OsszetettAdatszerkezet();
+    MenuVezerelt();
     return 0;
 
 }

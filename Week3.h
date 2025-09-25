@@ -15,4 +15,6 @@ void Madarnyelv();
 void Pontoksamolo();
 //5
 void OsszetettAdatszerkezet();
+//6
+void MenuVezerelt();
 #endif //PROG1_WEEK3_H
