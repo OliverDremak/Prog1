@@ -17,7 +17,7 @@ double abszolut(double n){
     return n;
 }
 
-void Függvények_alapok() {
+void Fuggvenyek_alapok() {
     for (double a = -1.0; a <= 1.0001; a += 0.1) {
         printf("%6.2f, %8.4f | %8.4f | %8.4f\n",
                a, kob(a), abszolut(a), sin(a));
@@ -38,7 +38,7 @@ void Madarnyelv() {
         if (MaganhangozoE(c)) {
             printf("%c",c);
             if (c >= 'A' && c <= 'Z') {
-                c = c + 32;
+                c = c + 'a'-'A';
             }
             printf("v%c", c);
         }
@@ -150,6 +150,8 @@ void versenyzo_kiir(Versenyzo v) {
                 printf("%d\n",a);
                 break;
             case 9:
+                break;
+            default:
                 break;
         }
     } while (m != 9);

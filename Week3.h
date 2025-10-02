@@ -7,7 +7,7 @@
 //2
 double kob(double n);
 double abszolut(double n);
-void Függvények_alapok();
+void Fuggvenyek_alapok();
 //3
 bool MaganhangozoE(char c);
 void Madarnyelv();

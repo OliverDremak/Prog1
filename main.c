@@ -4,6 +4,7 @@
 #include "NZH.h"
 #include <stdio.h>
 #include "Week3.h"
+#include "Week4.h"
 
 
 
@@ -11,9 +12,37 @@
 // Gyakorlat, labor - 70%-os részvétel
 // 4-5 kis zh - 2 nagy zh
 // nagy házi - 5. hét
+int IsSzokoEv(int ev) {
+    if (ev % 400 == 0 || (ev % 4 == 0 && ev % 100 != 0)) {
+        return 1;
+    }
+    return 0;
+}
+void Gyakshit() {
+    int ev,ho,nap, sum;
+    int hoes[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+    printf("ev ho nap");
+    scanf("%d%d%d",&ev,&ho,&nap);
+    for (int i = 0; i < ho-1; ++i) {
+        sum += hoes[i];
+    }
+    printf("%d nap", nap+sum+IsSzokoEv(ev));
+}
 
 int main(void) {
-
+    int i = 4;
+    printf("a: %d\n",i);
+    TerfogatSzamolo(&i);
+    printf("terület: %d\n",i);
+    i = 4;
+    FelületSzamolo(&i);
+    printf("felület: %d\n",i);
+    KiImre();
+    char in[100] = "  Szia Hello Mizuuujs?    ";
+    char out[100];
+    int l=100;
+    Trim2(in,out,l);
+    printf("%s!", out);
     //Szogek();
     //Tartaly();
     //SorozatNovekvoLepesekkel();
@@ -28,7 +57,8 @@ int main(void) {
     //Függvények_alapok();
     //Madarnyelv();
     //2OsszetettAdatszerkezet();
-    MenuVezerelt();
+    //MenuVezerelt();
+    //VektorkFeladat();
     return 0;
 
 }

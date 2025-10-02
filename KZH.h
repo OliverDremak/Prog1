@@ -9,5 +9,7 @@ int SorozatNovekvoLepesekkel();
 int SzamtaniSorozat();
 int Szogek();
 void Muzeum1();
+void PrimSzamIro();
 void Autopalya1();
+void VektorkFeladat();
 #endif //PROG1_KZH_H

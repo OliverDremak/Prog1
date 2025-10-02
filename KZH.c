@@ -2,11 +2,15 @@
 // Created by Oliver Dremak on 2025. 09. 15..
 //
 
+#include <math.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 // Kis zh példák
-// F01
 
+//
+// F01
+//
 /*Egy program bekér a felhasználótól három valós számot, kiírja, hogy az első szám negatív vagy nemnegatív, majd az első számtól indulva,
  *a második szám által meghatározott lépésközzel halad
  *a harmadik számig, a számsorozat elemeit kiírja.
@@ -67,10 +71,45 @@ int Szogek() {
 }
 
 
+void PrimSzamIro() {
+    int szam =120;
+    int i =2;
+    while (szam != 1) {
+        if (szam % i == 0 ) {
+            printf("%6d", szam);
+            szam = szam/i;
+            printf("|%d\n", i);
+        } else {
+            i++;
+        }
+    }
+    printf("%6d|",1);
+}
 
-
-
-
+void Kiszh1() {
+    int db, szam;
+    int osztok = 0;
+    int talalat = 0;
+    printf("db");
+    scanf("%d",&db);
+    for (int i = 0; i < db; ++i) {
+        printf("szam:");
+        scanf("%d", &szam);
+        for (int j = 1; j <= szam; ++j) {
+            if (szam % j == 0) {
+                osztok++;
+            }
+        }
+        if (osztok == 2) {
+            printf("2, prim");
+        } else {
+            printf("%d nem prim", osztok);
+            talalat++;
+        }
+        osztok = 0;
+        printf("%d darab osszetett", talalat);
+    }
+}
 
 //
 // F02
@@ -144,4 +183,44 @@ void Autopalya1() {
         }
 
     }
+}
+//
+//f03
+//
+typedef struct Vektor {
+    double x,y;
+} Vektor;
+
+double VektorLength(Vektor v) {
+    return sqrt(v.x*v.x + v.y*v.y);
+}
+
+Vektor OsszegVektor(Vektor v, Vektor b) {
+    Vektor x;
+    x.x = v.x+b.x;
+    x.y = v.y+b.y;
+    return x;
+}
+
+void VektorkFeladat() {
+    Vektor a;
+    a.x = 1;
+    a.y = 2;
+    Vektor b;
+    b.x = 2;
+    b.y = 2;
+    printf("%lf",VektorLength(OsszegVektor(a,b)));
+}
+
+
+typedef struct Kor {
+    double x,y,r;
+} Kor;
+
+bool FedikE(Kor a, Kor b) {
+
+}
+
+void AtfodoKorok() {
+
 }
