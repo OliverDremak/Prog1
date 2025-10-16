@@ -15,4 +15,6 @@ add_executable(Prog1 main.c
         Week3.h
         Week3.c
         Week4.h
-        Week4.c)
+        Week4.c
+        Week6.h
+        Week6.c)

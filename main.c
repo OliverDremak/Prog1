@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include "Week3.h"
 #include "Week4.h"
-
+#include "Week6.h"
 
 
 // InfoC - Segitség, Fejlesztői körnezet setup
@@ -29,7 +29,7 @@ void Gyakshit() {
     printf("%d nap", nap+sum+IsSzokoEv(ev));
 }
 
-int main(void) {
+void asd(){
     int i = 4;
     printf("a: %d\n",i);
     TerfogatSzamolo(&i);
@@ -43,6 +43,16 @@ int main(void) {
     int l=100;
     Trim2(in,out,l);
     printf("%s!", out);
+}
+
+int main(void) {
+
+    //printf("%d\n",Fibonacci(5));
+    //SzamRendszer(6,2);
+    //SzamInTree(11112312);
+    int l=10;
+    int t[10] = {0,1,2,3,4,5,6,7,8,9};
+    RE(t,l);
     //Szogek();
     //Tartaly();
     //SorozatNovekvoLepesekkel();
